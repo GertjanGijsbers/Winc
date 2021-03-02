@@ -1,0 +1,14 @@
+GoalmakerOne = 'Gullit'
+GoalmakerTwo = 'van Basten'
+goal_0 = 32
+goal_1 = 54
+
+scorers = GoalmakerOne + ' ' + str(goal_0) + ', ' + GoalmakerTwo + ' ' + str(goal_1)
+report = f'''{GoalmakerOne} scored in the {goal_0}nd minute \n{GoalmakerTwo} scored in the {goal_1}th minute'''
+
+player = 'Marco van Basten'
+first_name = player[0:5]
+last_name_len = player[6:16]
+name_short = first_name[0] + '. ' + last_name_len
+chant = f'{first_name}! ' * (len(first_name) - 1) + first_name + '!'
+good_chant = chant[-1] != ' '
