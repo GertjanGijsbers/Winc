@@ -1,8 +1,8 @@
 # Part 1: Greet Template
 def greet(name, greetings='Hello, '):
-    print(f'{greetings}{name}!')
+    return (f'{greetings}{name}!')
 
-greet('Bertje', 'Howdy, ')
+print(greet('Bertje', 'Howdy, '))
 
 # Part 2: Force
 def force(mass, body='earth'):
@@ -19,14 +19,13 @@ def force(mass, body='earth'):
         'moon': 1.62, 
         'pluto': 0.58
     }
-    print("{:.1f}".format(mass * d[body]))
-
-force(0.1, 'earth')
+    return ("{:.1f}".format(mass * d[body]))
+    
+print(force(0.1, 'earth'))
 
 # Part 3: Gravity
-
 def pull(m1, m2 , d):
     G = 6.674  * (10 ** -11)
-    print("{:.6f}".format(G * ((m1 * m2) / d ** 2)))
-
-pull(800, 1500, 3)
+    return ("{:.6f}".format(G * ((m1 * m2) / d ** 2)))
+    
+print(pull(800, 1500, 3))
