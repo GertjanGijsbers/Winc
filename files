@@ -28,13 +28,18 @@ def cache_zip(zip_file, folder_cache):
     with zipfile.ZipFile(zip_file, 'r') as zip_ref:
         zip_ref.extractall(folder_cache)
 
+print("excersize 2")
 print(cache_zip(zip_file, folder_cache))
 
 # excersize 3
 def cached_files():
-    list_files = [os.path.join(folder_cache, x) for x in os.listdir(folder_cache)]
-    return list_files
+    file_list = ""
+    os.chdir('cache')
+    for file in os.listdir():
+        file_list = file_list + os.path.abspath(file) + " "
+    return file_list
 
+print("excersize 3")
 print(cached_files())
 
 # excersize 4
@@ -47,4 +52,5 @@ def find_password(list_files):
                 t = re.search("[\n\r].*password:\s*([^\n\r]*)", file).group()
                 return t
 
+print("excersize 4")
 print(find_password(cached_files()))
